@@ -43,6 +43,7 @@ public class PlaceObject : MonoBehaviour
             {
                 Pose pose = hit.pose;
                 GameObject obj = Instantiate(prefab, pose.position, pose.rotation);
+                obj.transform.Rotate(0.0f, 180f, 0.0f, Space.Self);
             }
         }
         {
