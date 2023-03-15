@@ -6,7 +6,7 @@ using UnityEngine.XR.ARSubsystems;
 
 public class ARPlacement : MonoBehaviour
 {
-
+    public GameObject joyStickCanvas;
     public GameObject arObjectToSpawn;
     public GameObject placementIndicator;
     private GameObject spawnedObject;
@@ -15,13 +15,16 @@ public class ARPlacement : MonoBehaviour
     private ARRaycastManager aRRaycastManager;
     private bool placementPoseIsValid = false;
     public Camera camera;
-    private float initialDistance;
-    private Vector3 initialScale;
+  //  public GameObject shoot;
+    //private float initialDistance;
+    //private Vector3 initialScale;
 
     void Start()
     {
         //  aRPlaneManager = GetComponent<ARPlaneManager>();
         aRRaycastManager = FindObjectOfType<ARRaycastManager>();
+        joyStickCanvas.SetActive(false);
+     //   shoot.SetActive(false);
     }
 
     // need to update placement indicator, placement pose and spawn 
@@ -30,36 +33,38 @@ public class ARPlacement : MonoBehaviour
         if (spawnedObject == null && placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             ARPlaceObject();
+            //shoot.SetActive(true);
+            joyStickCanvas.SetActive(true);
         }
         // scale using pinch
-        if(Input.touchCount == 2)
-        {
-            var touchZero = Input.GetTouch(0);
-            var touchOne = Input.GetTouch(1);
+        //if(Input.touchCount == 2)
+        //{
+        //    var touchZero = Input.GetTouch(0);
+        //    var touchOne = Input.GetTouch(1);
 
-            if(touchZero.phase == TouchPhase.Ended || touchZero.phase  == TouchPhase.Canceled ||
-                touchOne.phase == TouchPhase.Ended || touchOne.phase == TouchPhase.Canceled )
-            {
-                return;
-            }
-            if(touchZero.phase == TouchPhase.Began || touchOne.phase == TouchPhase.Began)
-            {
-                initialDistance = Vector2.Distance(touchZero.position, touchOne.position);
-                initialScale = spawnedObject.transform.localScale; 
+        //    if(touchZero.phase == TouchPhase.Ended || touchZero.phase  == TouchPhase.Canceled ||
+        //        touchOne.phase == TouchPhase.Ended || touchOne.phase == TouchPhase.Canceled )
+        //    {
+        //        return;
+        //    }
+        //    if(touchZero.phase == TouchPhase.Began || touchOne.phase == TouchPhase.Began)
+        //    {
+        //        initialDistance = Vector2.Distance(touchZero.position, touchOne.position);
+        //        initialScale = spawnedObject.transform.localScale; 
 
-            }
-            else
-            {
-                var currentDistance = Vector2.Distance(touchZero.position, touchOne.position);
+        //    }
+        //    else
+        //    {
+        //        var currentDistance = Vector2.Distance(touchZero.position, touchOne.position);
 
-                if (Mathf.Approximately(initialDistance, 0))
-                {
-                    return;
-                }
-               var factor = currentDistance / initialDistance;
-                spawnedObject.transform.localScale = initialScale *factor;
-            }
-        }
+        //        if (Mathf.Approximately(initialDistance, 0))
+        //        {
+        //            return;
+        //        }
+        //       var factor = currentDistance / initialDistance;
+        //        spawnedObject.transform.localScale = initialScale *factor;
+        //    }
+        //}
 
         UpdatePlacementPose();
         UpdatePlacementIndicator();
