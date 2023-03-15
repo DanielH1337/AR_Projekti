@@ -44,25 +44,37 @@ extern void ARFeatheredPlaneMeshVisualizer_GenerateBoundaryUVs_mF756D3C1F7925A69
 extern void ARFeatheredPlaneMeshVisualizer__ctor_m9A77651BCAE58AA0B994FFF6C6B63B1CFF2729F6 (void);
 // 0x00000010 System.Void ARFeatheredPlaneMeshVisualizer::.cctor()
 extern void ARFeatheredPlaneMeshVisualizer__cctor_m56285A000EE27A1631BE9C5BCDA5C376E5D133C3 (void);
-// 0x00000011 System.Void PlaceObject::Awake()
+// 0x00000011 System.Void ARPlacement::Start()
+extern void ARPlacement_Start_m099846CB7B1B39875015FF83B916977F512F31F7 (void);
+// 0x00000012 System.Void ARPlacement::Update()
+extern void ARPlacement_Update_m4BB8A6904F5A09FB2A46E231A8E323BE54B50034 (void);
+// 0x00000013 System.Void ARPlacement::UpdatePlacementIndicator()
+extern void ARPlacement_UpdatePlacementIndicator_m40D712396478D71FB6A225F5A48A6722B48EF040 (void);
+// 0x00000014 System.Void ARPlacement::UpdatePlacementPose()
+extern void ARPlacement_UpdatePlacementPose_mAA1741FB6F809237598B63C2DA26C352D5937C38 (void);
+// 0x00000015 System.Void ARPlacement::ARPlaceObject()
+extern void ARPlacement_ARPlaceObject_m982B9B2F33AC4DDC2E37A83CD4C00D1CBC7CE76E (void);
+// 0x00000016 System.Void ARPlacement::.ctor()
+extern void ARPlacement__ctor_m13D40B9A26B154DDB1ABAC3D5E6CF03F7EE3F9ED (void);
+// 0x00000017 System.Void PlaceObject::Awake()
 extern void PlaceObject_Awake_mD6993E74BE76ED7E3B9AAA189F1B37638B7D2E70 (void);
-// 0x00000012 System.Void PlaceObject::OnEnable()
+// 0x00000018 System.Void PlaceObject::OnEnable()
 extern void PlaceObject_OnEnable_mB3104C829382C28FD236E0635DD37DC931A2F3EC (void);
-// 0x00000013 System.Void PlaceObject::OnDisable()
+// 0x00000019 System.Void PlaceObject::OnDisable()
 extern void PlaceObject_OnDisable_m4538A06E715E9ADB0910F24DA7BC187D3C6474F1 (void);
-// 0x00000014 System.Void PlaceObject::FingerDown(UnityEngine.InputSystem.EnhancedTouch.Finger)
+// 0x0000001A System.Void PlaceObject::FingerDown(UnityEngine.InputSystem.EnhancedTouch.Finger)
 extern void PlaceObject_FingerDown_m8F45C6F6D5360556C0854AAA70419FB18BFE1FA9 (void);
-// 0x00000015 System.Void PlaceObject::.ctor()
+// 0x0000001B System.Void PlaceObject::.ctor()
 extern void PlaceObject__ctor_m73094142430E3C4071B1660682AB5867522D1510 (void);
-// 0x00000016 System.Void FiveRabbitsDemo.AnimatorParamatersChange::Start()
+// 0x0000001C System.Void FiveRabbitsDemo.AnimatorParamatersChange::Start()
 extern void AnimatorParamatersChange_Start_m871E4A208B70403948907DD6EFF16B5C89AF6558 (void);
-// 0x00000017 System.Void FiveRabbitsDemo.AnimatorParamatersChange::Update()
+// 0x0000001D System.Void FiveRabbitsDemo.AnimatorParamatersChange::Update()
 extern void AnimatorParamatersChange_Update_mB838E976A19CD1C3F3FE31502501C8D442DCBBCD (void);
-// 0x00000018 System.Void FiveRabbitsDemo.AnimatorParamatersChange::OnGUI()
+// 0x0000001E System.Void FiveRabbitsDemo.AnimatorParamatersChange::OnGUI()
 extern void AnimatorParamatersChange_OnGUI_m240E5495716AFA707AEA5F259ACB8B4F85E0B3FD (void);
-// 0x00000019 System.Void FiveRabbitsDemo.AnimatorParamatersChange::.ctor()
+// 0x0000001F System.Void FiveRabbitsDemo.AnimatorParamatersChange::.ctor()
 extern void AnimatorParamatersChange__ctor_m4C2265B2747B0F180A4CC7EDFCC2F516838CC1AF (void);
-static Il2CppMethodPointer s_methodPointers[25] = 
+static Il2CppMethodPointer s_methodPointers[31] = 
 {
 	AnchorCreator_get_AnchorPrefab_mBBAF7805E9D9F8D79408EE642D153BC76306B25A,
 	AnchorCreator_set_AnchorPrefab_m53CC9CC3022C713826B44536B48B462C8A1FACFF,
@@ -80,6 +92,12 @@ static Il2CppMethodPointer s_methodPointers[25] =
 	ARFeatheredPlaneMeshVisualizer_GenerateBoundaryUVs_mF756D3C1F7925A69CD8C7C8CCE56209AB321FEF5,
 	ARFeatheredPlaneMeshVisualizer__ctor_m9A77651BCAE58AA0B994FFF6C6B63B1CFF2729F6,
 	ARFeatheredPlaneMeshVisualizer__cctor_m56285A000EE27A1631BE9C5BCDA5C376E5D133C3,
+	ARPlacement_Start_m099846CB7B1B39875015FF83B916977F512F31F7,
+	ARPlacement_Update_m4BB8A6904F5A09FB2A46E231A8E323BE54B50034,
+	ARPlacement_UpdatePlacementIndicator_m40D712396478D71FB6A225F5A48A6722B48EF040,
+	ARPlacement_UpdatePlacementPose_mAA1741FB6F809237598B63C2DA26C352D5937C38,
+	ARPlacement_ARPlaceObject_m982B9B2F33AC4DDC2E37A83CD4C00D1CBC7CE76E,
+	ARPlacement__ctor_m13D40B9A26B154DDB1ABAC3D5E6CF03F7EE3F9ED,
 	PlaceObject_Awake_mD6993E74BE76ED7E3B9AAA189F1B37638B7D2E70,
 	PlaceObject_OnEnable_mB3104C829382C28FD236E0635DD37DC931A2F3EC,
 	PlaceObject_OnDisable_m4538A06E715E9ADB0910F24DA7BC187D3C6474F1,
@@ -90,39 +108,45 @@ static Il2CppMethodPointer s_methodPointers[25] =
 	AnimatorParamatersChange_OnGUI_m240E5495716AFA707AEA5F259ACB8B4F85E0B3FD,
 	AnimatorParamatersChange__ctor_m4C2265B2747B0F180A4CC7EDFCC2F516838CC1AF,
 };
-static const int32_t s_InvokerIndices[25] = 
+static const int32_t s_InvokerIndices[31] = 
 {
-	5122,
-	4164,
-	5217,
-	5217,
-	5217,
-	5217,
-	8300,
-	5163,
-	4197,
-	5217,
-	5217,
-	5217,
-	4059,
-	4164,
-	5217,
-	8300,
-	5217,
-	5217,
-	5217,
-	4164,
-	5217,
-	5217,
-	5217,
-	5217,
-	5217,
+	5124,
+	4166,
+	5219,
+	5219,
+	5219,
+	5219,
+	8302,
+	5165,
+	4199,
+	5219,
+	5219,
+	5219,
+	4061,
+	4166,
+	5219,
+	8302,
+	5219,
+	5219,
+	5219,
+	5219,
+	5219,
+	5219,
+	5219,
+	5219,
+	5219,
+	4166,
+	5219,
+	5219,
+	5219,
+	5219,
+	5219,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	25,
+	31,
 	s_methodPointers,
 	0,
 	NULL,

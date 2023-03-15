@@ -14,7 +14,7 @@ public class PlaceObject : MonoBehaviour
     private ARRaycastManager aRRaycastManager;
     private ARPlaneManager aRPlaneManager;
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
-    // Start is called before the first frame update
+
 
     private void Awake()
     {
@@ -22,6 +22,7 @@ public class PlaceObject : MonoBehaviour
         aRPlaneManager = GetComponent<ARPlaneManager>();
         
     }
+
     private void OnEnable()
     {
         EnhancedTouch.TouchSimulation.Enable();
