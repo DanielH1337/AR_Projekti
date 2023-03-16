@@ -7,7 +7,7 @@ public class Explode : MonoBehaviour
     public GameObject explosion;
     public GameObject scoreToSpawn;
     public GameObject enemyToSpawn;
-    public float waitTime = 3.0f;
+    public float waitTime = 1f;
     Vector3 killPos;
     Quaternion killRot;
     bool bulletCollision = false; // to awoid hitting multiple spiders with same bullet

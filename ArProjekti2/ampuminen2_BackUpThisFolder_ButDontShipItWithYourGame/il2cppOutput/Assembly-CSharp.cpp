@@ -3418,8 +3418,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Explode_SpawnEnemyAgain_m9606B
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Explode__ctor_m87E0F75692364C98C2BBCF984D64D9E198F126A6 (Explode_t4635F1D29094AC378A54EE157376D11F587B5E6F* __this, const RuntimeMethod* method) 
 {
 	{
-		// public float waitTime = 3.0f;
-		__this->___waitTime_7 = (3.0f);
+		// public float waitTime = 1f;
+		__this->___waitTime_7 = (1.0f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}

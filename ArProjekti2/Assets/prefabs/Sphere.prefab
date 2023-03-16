@@ -130,4 +130,4 @@ MonoBehaviour:
   explosion: {fileID: 7492317037656303727, guid: f70a5ba27d8d0c84ca0c9643a1ab52de, type: 3}
   scoreToSpawn: {fileID: 3355090299880104249, guid: 52d797a5a7e70a943acb26f84dac36dd, type: 3}
   enemyToSpawn: {fileID: 1115346038830892, guid: 3f9dcd6bf73fe2f40806fb0074f456c4, type: 3}
-  waitTime: 4
+  waitTime: 1
