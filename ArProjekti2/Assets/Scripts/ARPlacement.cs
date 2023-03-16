@@ -6,7 +6,7 @@ using UnityEngine.XR.ARSubsystems;
 
 public class ARPlacement : MonoBehaviour
 {
-    public GameObject joyStickCanvas;
+   // public GameObject joyStickCanvas;
     public GameObject arObjectToSpawn;
     public GameObject placementIndicator;
     private GameObject spawnedObject;
@@ -15,7 +15,7 @@ public class ARPlacement : MonoBehaviour
     private ARRaycastManager aRRaycastManager;
     private bool placementPoseIsValid = false;
     public Camera camera;
-  //  public GameObject shoot;
+    public GameObject shoot;
     //private float initialDistance;
     //private Vector3 initialScale;
 
@@ -23,8 +23,8 @@ public class ARPlacement : MonoBehaviour
     {
         //  aRPlaneManager = GetComponent<ARPlaneManager>();
         aRRaycastManager = FindObjectOfType<ARRaycastManager>();
-        joyStickCanvas.SetActive(false);
-     //   shoot.SetActive(false);
+        //joyStickCanvas.SetActive(false);
+        shoot.SetActive(false);
     }
 
     // need to update placement indicator, placement pose and spawn 
@@ -33,8 +33,8 @@ public class ARPlacement : MonoBehaviour
         if (spawnedObject == null && placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             ARPlaceObject();
-            //shoot.SetActive(true);
-            joyStickCanvas.SetActive(true);
+            shoot.SetActive(true);
+            //joyStickCanvas.SetActive(true);
         }
         // scale using pinch
         //if(Input.touchCount == 2)
@@ -101,7 +101,7 @@ public class ARPlacement : MonoBehaviour
     void ARPlaceObject()
     {
         spawnedObject = Instantiate(arObjectToSpawn, PlacementPose.position, PlacementPose.rotation);
-        spawnedObject.transform.Rotate(0.0f, 180f, 0.0f, Space.Self);
+       // spawnedObject.transform.Rotate(0.0f, 180f, 0.0f, Space.Self);
     }
 
 

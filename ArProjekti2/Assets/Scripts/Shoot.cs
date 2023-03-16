@@ -5,23 +5,18 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
 
-    public GameObject arCamera;
-    public GameObject explosion;
+    public Transform arCamera;
+    public GameObject projectile;
 
-    RaycastHit hit;
+    public float shootForce = 700.0f;
+
+
     void Update()
     {
-        if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
-             if(Physics.Raycast(arCamera.transform.position, arCamera.transform.forward, out hit))
-            {
-                if(hit.transform.tag == "Rabbit")
-                {
-                    Destroy(hit.transform.gameObject);
-                    Instantiate(explosion, hit.transform.position, hit.transform.rotation);
-                    Destroy(explosion, 2f);
-                }
-            }
+            GameObject bullet = Instantiate(projectile, arCamera.position, arCamera.rotation) as GameObject;
+            bullet.GetComponent<Rigidbody>().AddForce(arCamera.forward * shootForce);
         }
     }
 }
